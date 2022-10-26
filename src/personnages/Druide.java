@@ -22,8 +22,6 @@ public class Druide {
 	private String prendreParole() {
 		return "Le druide " + nom + " : ";
 	}
-	public int preparerPotion() {
-		
-	}
+
 }
 
