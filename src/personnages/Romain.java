@@ -18,18 +18,22 @@ public class Romain {
 		return "Le romain " + nom + " : ";
 	}
 	public void recevoirCoup(int forceCoup) {
+		assert forceCoup >= 0: "la force doit être positive!";
+		int x = force;
 		force -= forceCoup;
+		assert force < x : "la force d’un Romain n'a pas diminué";
 		if (force > 0) {
 			parler("Aïe");
 		} else {
 			parler("J'abandonne...");
 		}
+		
 	}
 public static void main(String[] args) {
 	Romain cesar = new Romain("cesar", 6);
 	cesar.prendreParole1();
 	cesar.parler("non, ne me frappe pas...");
-	cesar.recevoirCoup(6);
+	cesar.recevoirCoup(0);
 	
 	
 }
